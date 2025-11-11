@@ -1,0 +1,46 @@
+/* styles.css */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.card {
+  background: white;
+  padding: 28px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  width: 320px;
+  text-align: center;
+}
+
+.card h2 { margin-top: 0; }
+
+.card form { display: flex; flex-direction: column; gap: 10px; }
+.card input[type="text"],
+.card input[type="email"],
+.card input[type="password"] {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.card button {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(90deg, #6366f1, #06b6d4);
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.messages { list-style: none; padding: 0; margin: 10px 0; }
+.messages li { padding: 8px; border-radius: 6px; margin-bottom: 6px; }
+.messages li.success { background: #e6fffa; color: #065f46; border: 1px solid #bdecd4; }
+.messages li.error { background: #ffeef0; color: #842029; border: 1px solid #f5c2c7; }
+.messages li.info { background: #eef2ff; color: #3730a3; border: 1px solid #c7d2fe; }
