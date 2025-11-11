@@ -58,7 +58,7 @@ def login():
 
         user = users.find_one({"email": email})
         if user and check_password_hash(user['password'], password):
-            # session मध्ये user info ठेवा (जास्त माहिती न ठेवल्याने सुरक्षित)
+            # session user info
             session['user'] = {"id": str(user['_id']), "name": user.get('name'), "email": user.get('email')}
             flash("Login successful", "success")
             return redirect(url_for('index'))
@@ -77,4 +77,5 @@ def logout():
     return redirect(url_for('login'))
 
 if __name__ == '__main__':
+
     app.run(debug=True)
